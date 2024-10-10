@@ -10,3 +10,10 @@ Requirements:
 pip install pipenv
 ```
 
+## Run
+
+Execute the Make command:
+```bash
+make run
+```
+
