@@ -1,9 +1,13 @@
 import yt_dlp
+import os
 
 def download_video(url):
+    output_folder = "outputs"
+    os.path.join(output_folder, '%(title)s.%(ext)s')
+
     ydl_opts = {
         'format': 'bestvideo+bestaudio/best',  # Downloads the best video and audio quality
-        'outtmpl': '%(title)s.%(ext)s',  # Saves the file as video title
+        'outtmpl':os.path.join(output_folder, '%(title)s.%(ext)s'),  # Saves the file as video title
         'merge_output_format': 'mp4',  # Ensures output is in mp4 format
     }
 
